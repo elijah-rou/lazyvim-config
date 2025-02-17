@@ -1,11 +1,14 @@
 {
   "extras": [
     "lazyvim.plugins.extras.lang.elixir",
+    "lazyvim.plugins.extras.lang.go",
     "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.yaml",
     "lazyvim.plugins.extras.vscode"
   ],
+  "install_version": 7,
   "news": {
-    "NEWS.md": "2123"
+    "NEWS.md": "10960"
   },
-  "version": 2
+  "version": 8
 }
