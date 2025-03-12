@@ -25,7 +25,7 @@ vim.opt.wrap = true
 
 require("lazy").setup({
   spec = {
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", version = "14.*" },
     { import = "plugins" },
   },
   defaults = {
