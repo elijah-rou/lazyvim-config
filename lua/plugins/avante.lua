@@ -6,15 +6,18 @@ return {
   opts = {
     provider = "claude",
     auto_suggestions_provider = "claude",
-    claude = {
-      endpoint = "https://api.anthropic.com",
-      api_key_name = "ANTHROPIC_API_KEY",
-      -- model = "claude-3-7-sonnet-20250219",
-      model = "claude-3-5-sonnet-20241022",
-      timeout = 15000,
-      temperature = 0.2,
-      max_tokens = 8000,
-      disable_tools = true,
+    providers = {
+      claude = {
+        endpoint = "https://api.anthropic.com",
+        api_key_name = "ANTHROPIC_API_KEY",
+        model = "claude-sonnet-4-20250514",
+        timeout = 15000,
+        extra_request_body = {
+            temperature = 0.75,
+            max_tokens = 20480,
+        },
+        disable_tools = false
+      }
     },
     behaviour = {
       support_paste_from_clipboard = true,
