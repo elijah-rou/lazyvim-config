@@ -8,9 +8,9 @@ return {
         theme = "carbonfox",
         globalstatus = vim.o.laststatus == 3,
         disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter", "snacks_dashboard" } },
+        section_separators = "",
+        component_separators = "",
       },
-      section_separators = "",
-      component_separators = "",
       sections = {
         lualine_a = { "mode" },
         lualine_b = { "branch" },
@@ -39,14 +39,14 @@ return {
           },
           -- stylua: ignore
           {
-            function() return require("noice").api.status.command end,
-            cond = function() return package.loaded["noice"] and require("noice").api.status.command end,
+            function() return require("noice").api.status.command.get() end,
+            cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
             color = function() return { fg = Snacks.util.color("Statement") } end,
           },
           -- stylua: ignore
           {
-            function() return require("noice").api.status.mode end,
-            cond = function() return package.loaded["noice"] and require("noice").api.status.mode end,
+            function() return require("noice").api.status.mode.get() end,
+            cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
             color = function() return { fg = Snacks.util.color("Constant") } end,
           },
           -- stylua: ignore

@@ -4,4 +4,5 @@
 return {
   "augmentcode/augment.vim",
   event = "InsertEnter",
+  cmd = "Augment",
 }
