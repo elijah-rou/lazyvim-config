@@ -32,7 +32,7 @@ return {
     "MunifTanjim/nui.nvim",
     "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
     "ibhagwan/fzf-lua", -- for file_selector provider fzf
-    "echasnovski/mini.icons",
+    "nvim-mini/mini.icons",
     {
       "HakonHarnes/img-clip.nvim",
       event = "VeryLazy",

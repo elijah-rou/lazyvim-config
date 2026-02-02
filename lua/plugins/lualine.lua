@@ -29,7 +29,14 @@ return {
           "filename",
         },
         lualine_x = {
-          Snacks.profiler.status(),
+          {
+            function()
+              return Snacks.profiler.status()
+            end,
+            cond = function()
+              return package.loaded["snacks"] and Snacks.profiler and Snacks.profiler.status
+            end,
+          },
           -- stylua: ignore
           {
             function() return require("noice").api.status.command end,
